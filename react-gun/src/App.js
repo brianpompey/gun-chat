@@ -17,3 +17,13 @@ function reducer(state, message) {
     messages: [message, ...state.messages]
   }
 }
+
+export default function App() {
+  const [formState, setForm] = useState({
+    name: '', message: ''
+  })
+
+  function onChange(e) {
+    setForm({ ...formState, [e.target.name]: e.target.value  })
+  }
+}
