@@ -40,4 +40,16 @@ export default function App() {
   function onChange(e) {
     setForm({ ...formState, [e.target.name]: e.target.value  })
   }
+
+  function saveMessage() {
+    const messages = gun.get('messages')
+    messages.set({
+      name: formState.name,
+      message: formState.message,
+      createdAt: Date.now()
+    })
+    setForm({
+      name: '', message: ''
+    })
+  }
 }
