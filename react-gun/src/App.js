@@ -7,3 +7,7 @@ const gun = Gun({
     'http://localhost:3030/gun'
   ]
 })
+
+const initialState = {
+  messages: []
+}
