@@ -11,3 +11,9 @@ const gun = Gun({
 const initialState = {
   messages: []
 }
+
+function reducer(state, message) {
+  return {
+    messages: [message, ...state.messages]
+  }
+}
